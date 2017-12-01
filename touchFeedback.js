@@ -7,7 +7,7 @@
         var classUtil = {
             hasClass: function (elem, cls){
                 cls = cls || '';
-                if(cls.replace(/\s/g, '').length == 0) return false;
+                if(cls.replace(/\s/g, '').length == 0 || !elem) return false;
                 return new RegExp(' ' + cls + ' ').test(' ' + elem.className + ' ');
             },
             addClass: function (elem, cls){
